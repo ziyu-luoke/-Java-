@@ -1,0 +1,37 @@
+# ===== 本地敏感凭据，绝不提交 =====
+本地凭据-勿外传.md
+.env
+*.env
+**/凭据*
+**/*勿外传*
+本地凭据*
+
+# ===== 大体积二进制（GitHub 单文件 100MB 硬限制，且无版本管理价值）=====
+*.jar
+*.bin
+*.wav
+*.opus
+*.mp3
+*.class
+
+# ===== 探针/反编译/抓包临时产物 =====
+.probe/*
+# 白名单：只保留有复用价值的脚本与 Dockerfile
+!.probe/patch_jars.py
+!.probe/Dockerfile.server
+!.probe/Dockerfile.dialogue
+!.probe/ws_verify.py
+
+# 顶层探针文件
+.api_docs.json
+.frontend_probe.js
+
+# ===== 运行时/日志 =====
+*.log
+*.tmp
+__pycache__/
+*.pyc
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
